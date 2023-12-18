@@ -1,0 +1,9 @@
+<?php
+/**
+ * @var $block \Kelvysmoura\Metatag\Block\Metatag
+ */
+?>
+
+<?php foreach ($block->getMetatagAttributes() as $metatag): ?>
+    <link rel="alternate" hreflang="<?= $metatag['hreflang'] ?>" href="<?= $metatag['href'] ?>"/>
+<?php endforeach; ?>
