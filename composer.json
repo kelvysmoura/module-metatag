@@ -1,0 +1,33 @@
+{
+    "name": "kelvysmoura/module-metatag",
+    "description": "N/A",
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "Kelvys Moura",
+            "email": "kelvysmoura2@gmail.com"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "version": "dev-master",
+    "minimum-stability": "dev",
+    "require": {
+        "php": "~8.1.0||~8.2.0",
+        "magento/module-cms": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Kelvysmoura\\Metatag\\": ""
+        }
+    }
+}
+
