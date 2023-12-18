@@ -109,12 +109,12 @@ resolvi propor esse desafio a mais para "desenferrujar" o desenvolvimento de tes
 > São 3 casos de teste
 >
 > 1. testGetMetatagAttributesWithPageIdNull
-     >   - Cobre o caso em que page_id da requisição não retorna um ID da loja e o método precisa retornar um array vazio.
+>   - Cobre o caso em que page_id da requisição não retorna um ID da loja e o método precisa retornar um array vazio.
 > 2. testGetMetatagAttributesWithPageForAllStores
-     >   - Cobre o caso em que o page_id retorno apenas um id de valor 0. Nesse caso o método `getPageStoreIds` precisa entrar no
-           >   que retorna o ID de todas as lojas.
+>   - Cobre o caso em que o page_id retorno apenas um id de valor 0. Nesse caso o método `getPageStoreIds` precisa entrar no if
+>   que retorna o ID de todas as lojas.
 > 3. testGetMetatagAttributesForTwoStores
-     >   - Cobre o caso em que o page_id da requisição retornar 2 ids. Nesse caso o método `getPageStoreIds` precisa pular o if e retornar os id da página.
+>   - Cobre o caso em que o page_id da requisição retornar 2 ids. Nesse caso o método `getPageStoreIds` precisa pular o if e retornar os id da página.
 
 ## Exemplo do resultado esperado
 ![Print do resultado que mostra 3 urls, uma para cada idioma](./result.png)
