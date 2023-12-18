@@ -53,11 +53,9 @@ public function getPageStoreIds(Page $page)
 {
    $storeIds = (array)$page->getStoreId();
 
-
    if(count($storeIds) === 1 && $storeIds[0] == 0) {
        return $this->_storeManager->getStore()->getWebsite()->getStoreIds();
    }
-
 
    return $storeIds;
 }
@@ -69,10 +67,8 @@ public function buildMetatagAttribute(int|string $storeId, string $identifier): 
 {
    $store = $this->_storeManager->getStore($storeId);
 
-
    $hreflang = $store->getConfig("general/locale/code");
    $href = $store->getBaseUrl() . $identifier;
-
 
    return [
        "hreflang" => strtolower($hreflang),
@@ -87,22 +83,15 @@ Esse método faz uso dos outros dois já citados.
 public function getMetatagAttributes(): array
 {
 
-
    $pageId = $this->getRequest()->getParam('page_id');
-
-
-
 
    if (empty($pageId)) {
        return [];
    }
 
-
    $page = $this->pageFactory->create()->load($pageId);
 
-
    $storeIds = $this->getPageStoreIds($page);
-
 
    return array_map(function ($storeId) use ($page) {
        return $this->buildMetatagAttribute($storeId, $page->getIdentifier());
